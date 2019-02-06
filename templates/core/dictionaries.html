@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% for dictionary in dictionaries %}
+    <p>{{ dictionary.owner }} - {{ dictionary.title }}</p>
+  {% empty %}
+    <p>No dictionaries yet :(</p>
+  {% endfor %}
+{% endblock %}

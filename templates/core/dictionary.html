@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ dictionary.title }}</h1>
+  <h5>{{ dictionary.owner }}</h5>
+  {% for word in dictionary.words.all %}
+    <p>{{ word.word }} - {{ word.definition }}</p>
+  {% endfor %}
+{% endblock %}
